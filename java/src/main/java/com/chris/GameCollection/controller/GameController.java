@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -25,5 +26,11 @@ public class GameController {
         }
         return result;
     }
+
+    @RequestMapping(path="game/list", method = RequestMethod.GET)
+    public List<Game> listGames(){
+        return gameDao.listAllGames();
+    }
+
 
 }
