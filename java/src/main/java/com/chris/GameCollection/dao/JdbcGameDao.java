@@ -18,16 +18,7 @@ public class JdbcGameDao implements GameDao{
 
     @Override
     public Game getGame(int id) {
-        String sql = " SELECT game_name " +
-                " FROM game " +
-                " WHERE id = ?";
-
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, id);
-        if(results.next()){
-            return mapRowToGame(results);
-        }else{
-            return null;
-        }
+        return listAllGames().get(id-1);
     }
 
     @Override
