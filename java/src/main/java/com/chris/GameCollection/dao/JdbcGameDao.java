@@ -40,9 +40,10 @@ public class JdbcGameDao implements GameDao{
     private Game mapRowToGame(SqlRowSet res){
         Game game = new Game();
 
-        game.setId(res.getInt("id"));
-        game.setId(res.getInt("genre_id"));
+        game.setGameId(res.getInt("game_id"));
         game.setGameName(res.getString("game_name"));
+        game.setGenreId(res.getInt("genre_id"));
+        game.setPlatformId(res.getInt("platform_id"));
         game.setImgUrl(res.getString("img_url"));
 
         return game;

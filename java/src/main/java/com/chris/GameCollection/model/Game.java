@@ -1,17 +1,26 @@
 package com.chris.GameCollection.model;
 
 public class Game {
-    private int id;
+    private int gameId;
     private int genreId;
     private String gameName;
+    private int platformId;
     private String imgUrl;
 
-    public int getId() {
-        return id;
+    public int getPlatformId() {
+        return platformId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPlatformId(int platformId) {
+        this.platformId = platformId;
+    }
+
+    public int getGameId() {
+        return gameId;
+    }
+
+    public void setGameId(int gameId) {
+        this.gameId = gameId;
     }
 
     public int getGenreId() {
